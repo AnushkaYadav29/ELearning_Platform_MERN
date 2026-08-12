@@ -1,0 +1,86 @@
+:root {
+  /* =========================
+     BRAND COLORS
+  ========================== */
+
+  --primary: #6d5dfb;
+  --primary-dark: #5143d9;
+  --primary-light: #eeecff;
+
+  --secondary: #14b8a6;
+  --secondary-light: #e6fffb;
+
+  --accent: #f59e0b;
+  --accent-light: #fff7e6;
+
+  /* =========================
+     NEUTRALS
+  ========================== */
+
+  --bg-main: #f7f8fc;
+  --bg-soft: #f0f2f8;
+  --surface: #ffffff;
+
+  --text-primary: #172033;
+  --text-secondary: #667085;
+  --text-muted: #98a2b3;
+
+  --border: #e4e7ec;
+
+  /* =========================
+     STATUS
+  ========================== */
+
+  --success: #12b76a;
+  --danger: #f04438;
+  --warning: #f79009;
+  --info: #2e90fa;
+
+  /* =========================
+     GRADIENTS
+  ========================== */
+
+  --gradient-primary: linear-gradient(
+    135deg,
+    #6d5dfb,
+    #5143d9
+  );
+
+  --gradient-dark: linear-gradient(
+    135deg,
+    #111827,
+    #1f2937
+  );
+
+  --gradient-auth: linear-gradient(
+    135deg,
+    #1e1b4b 0%,
+    #312e81 45%,
+    #4f46e5 100%
+  );
+
+  /* =========================
+     SHADOWS
+  ========================== */
+
+  --shadow-sm: 0 2px 8px rgba(16, 24, 40, 0.06);
+
+  --shadow-md: 0 8px 24px rgba(16, 24, 40, 0.08);
+
+  --shadow-lg: 0 20px 50px rgba(16, 24, 40, 0.12);
+
+  /* =========================
+     BORDER RADIUS
+  ========================== */
+
+  --radius-sm: 8px;
+  --radius-md: 14px;
+  --radius-lg: 20px;
+  --radius-xl: 28px;
+
+  /* =========================
+     TRANSITIONS
+  ========================== */
+
+  --transition: all 0.25s ease;
+}
