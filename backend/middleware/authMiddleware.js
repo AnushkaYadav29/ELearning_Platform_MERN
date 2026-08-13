@@ -1,6 +1,11 @@
 const jwt = require("jsonwebtoken");
 const User = require("../models/User");
 
+
+// ========================================
+// PROTECT ROUTE
+// ========================================
+
 const protect = async (req, res, next) => {
   try {
     let token;
@@ -19,9 +24,14 @@ const protect = async (req, res, next) => {
       });
     }
 
-    const decoded = jwt.verify(token, process.env.JWT_SECRET);
+    const decoded = jwt.verify(
+      token,
+      process.env.JWT_SECRET
+    );
 
-    const user = await User.findById(decoded.id).select("-password");
+    const user = await User.findById(
+      decoded.id
+    ).select("-password");
 
     if (!user) {
       return res.status(401).json({
@@ -40,6 +50,7 @@ const protect = async (req, res, next) => {
     req.user = user;
 
     next();
+
   } catch (error) {
     return res.status(401).json({
       success: false,
@@ -48,4 +59,39 @@ const protect = async (req, res, next) => {
   }
 };
 
-module.exports = { protect };
+
+// ========================================
+// ROLE AUTHORIZATION
+// ========================================
+
+const authorize = (...roles) => {
+  return (req, res, next) => {
+
+    if (!req.user) {
+      return res.status(401).json({
+        success: false,
+        message: "Not authenticated.",
+      });
+    }
+
+    if (!roles.includes(req.user.role)) {
+      return res.status(403).json({
+        success: false,
+        message:
+          "You are not authorized to access this resource.",
+      });
+    }
+
+    next();
+  };
+};
+
+
+// ========================================
+// EXPORT
+// ========================================
+
+module.exports = {
+  protect,
+  authorize,
+};

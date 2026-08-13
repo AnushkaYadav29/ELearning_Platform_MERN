@@ -811,3 +811,670 @@
     font-size: 24px;
   }
 }
+
+/* =========================
+   ADMIN STUDENTS
+========================= */
+
+.admin-students-page {
+  width: 100%;
+}
+
+.dashboard-primary-btn {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.dashboard-primary-btn svg {
+  font-size: 18px;
+}
+
+/* =========================
+   SUMMARY
+========================= */
+
+.student-summary-grid {
+  display: grid;
+
+  grid-template-columns: repeat(4, 1fr);
+
+  gap: 18px;
+
+  margin-bottom: 24px;
+}
+
+.student-summary-card {
+  display: flex;
+  align-items: center;
+
+  gap: 14px;
+
+  padding: 18px 20px;
+
+  background: white;
+
+  border: 1px solid var(--border);
+
+  border-radius: 16px;
+
+  box-shadow: var(--shadow-sm);
+}
+
+.summary-card-icon {
+  width: 44px;
+  height: 44px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 12px;
+
+  background: var(--primary-light);
+
+  font-size: 19px;
+}
+
+.active-icon {
+  background: #ecfdf3;
+}
+
+.inactive-icon {
+  background: #f3f4f6;
+}
+
+.progress-icon {
+  background: var(--secondary-light);
+
+  color: var(--secondary);
+}
+
+.student-summary-card div:last-child {
+  display: flex;
+  flex-direction: column;
+
+  gap: 3px;
+}
+
+.student-summary-card span {
+  color: var(--text-muted);
+
+  font-size: 11px;
+}
+
+.student-summary-card strong {
+  font-size: 20px;
+}
+
+/* =========================
+   STUDENTS TOOLBAR
+========================= */
+
+.students-table-card {
+  padding: 0;
+
+  overflow: visible;
+}
+
+.students-toolbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 24px;
+
+  border-bottom: 1px solid var(--border);
+}
+
+.students-toolbar h3 {
+  margin-bottom: 5px;
+
+  font-size: 17px;
+}
+
+.students-toolbar p {
+  margin: 0;
+
+  color: var(--text-muted);
+
+  font-size: 12px;
+}
+
+.students-toolbar-actions {
+  display: flex;
+  align-items: center;
+
+  gap: 10px;
+}
+
+.student-search {
+  width: 230px;
+  height: 40px;
+
+  display: flex;
+  align-items: center;
+
+  gap: 8px;
+
+  padding: 0 12px;
+
+  border: 1px solid var(--border);
+
+  border-radius: 9px;
+
+  background: white;
+}
+
+.student-search svg {
+  color: var(--text-muted);
+
+  font-size: 18px;
+}
+
+.student-search input {
+  width: 100%;
+
+  border: none;
+  outline: none;
+
+  background: transparent;
+
+  font-size: 12px;
+}
+
+.student-filter {
+  height: 40px;
+
+  display: flex;
+  align-items: center;
+
+  gap: 7px;
+
+  padding: 0 10px;
+
+  border: 1px solid var(--border);
+
+  border-radius: 9px;
+
+  color: var(--text-secondary);
+}
+
+.student-filter svg {
+  font-size: 17px;
+}
+
+.student-filter select {
+  border: none;
+
+  outline: none;
+
+  background: transparent;
+
+  color: var(--text-secondary);
+
+  font-size: 12px;
+
+  cursor: pointer;
+}
+
+.table-refresh-btn {
+  width: 40px;
+  height: 40px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border: 1px solid var(--border);
+
+  border-radius: 9px;
+
+  background: white;
+
+  color: var(--text-secondary);
+
+  cursor: pointer;
+
+  transition: var(--transition);
+}
+
+.table-refresh-btn:hover {
+  color: var(--primary);
+
+  border-color: var(--primary);
+}
+
+.table-refresh-btn svg {
+  font-size: 17px;
+}
+
+/* =========================
+   TABLE
+========================= */
+
+.students-table-wrapper {
+  overflow-x: auto;
+}
+
+.students-table {
+  width: 100%;
+
+  border-collapse: collapse;
+
+  min-width: 850px;
+}
+
+.students-table th {
+  padding: 14px 24px;
+
+  text-align: left;
+
+  background: #fafbfc;
+
+  color: var(--text-muted);
+
+  font-size: 10px;
+
+  font-weight: 700;
+
+  letter-spacing: 0.7px;
+
+  text-transform: uppercase;
+
+  border-bottom: 1px solid var(--border);
+}
+
+.students-table td {
+  padding: 17px 24px;
+
+  border-bottom: 1px solid #f0f1f4;
+
+  font-size: 12px;
+}
+
+.students-table tbody tr {
+  transition: var(--transition);
+}
+
+.students-table tbody tr:hover {
+  background: #fafaff;
+}
+
+/* =========================
+   STUDENT USER
+========================= */
+
+.student-table-user {
+  display: flex;
+  align-items: center;
+
+  gap: 11px;
+}
+
+.student-table-avatar {
+  width: 38px;
+  height: 38px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 11px;
+
+  background: var(--primary-light);
+
+  color: var(--primary);
+
+  font-size: 11px;
+
+  font-weight: 700;
+}
+
+.student-table-user div:last-child {
+  display: flex;
+  flex-direction: column;
+
+  gap: 3px;
+}
+
+.student-table-user strong {
+  color: var(--text-primary);
+
+  font-size: 12px;
+}
+
+.student-table-user span {
+  color: var(--text-muted);
+
+  font-size: 10px;
+}
+
+.table-muted {
+  color: var(--text-secondary);
+}
+
+.course-count {
+  display: inline-flex;
+
+  align-items: center;
+  justify-content: center;
+
+  min-width: 28px;
+
+  padding: 5px 9px;
+
+  border-radius: 7px;
+
+  background: var(--bg-soft);
+
+  color: var(--text-primary);
+
+  font-weight: 600;
+}
+
+/* =========================
+   PROGRESS
+========================= */
+
+.student-progress {
+  width: 110px;
+}
+
+.progress-top {
+  margin-bottom: 5px;
+
+  color: var(--text-secondary);
+
+  font-size: 10px;
+
+  text-align: right;
+}
+
+.progress-track {
+  width: 100%;
+  height: 5px;
+
+  overflow: hidden;
+
+  border-radius: 10px;
+
+  background: #eceef3;
+}
+
+.progress-fill {
+  height: 100%;
+
+  border-radius: inherit;
+
+  background: var(--gradient-primary);
+}
+
+/* =========================
+   STATUS
+========================= */
+
+.student-status {
+  display: inline-flex;
+
+  align-items: center;
+
+  gap: 6px;
+
+  padding: 6px 10px;
+
+  border-radius: 20px;
+
+  font-size: 10px;
+
+  font-weight: 600;
+}
+
+.student-status > span {
+  width: 5px;
+  height: 5px;
+
+  border-radius: 50%;
+}
+
+.student-status-active {
+  background: #ecfdf3;
+
+  color: #159669;
+}
+
+.student-status-active > span {
+  background: #22c55e;
+}
+
+.student-status-inactive {
+  background: #f3f4f6;
+
+  color: #6b7280;
+}
+
+.student-status-inactive > span {
+  background: #9ca3af;
+}
+
+/* =========================
+   ACTIONS
+========================= */
+
+.student-actions-cell {
+  position: relative;
+
+  text-align: right;
+}
+
+.student-actions-btn {
+  width: 32px;
+  height: 32px;
+
+  display: inline-flex;
+
+  align-items: center;
+  justify-content: center;
+
+  border: none;
+
+  border-radius: 8px;
+
+  background: transparent;
+
+  color: var(--text-muted);
+
+  cursor: pointer;
+}
+
+.student-actions-btn:hover {
+  background: var(--bg-soft);
+
+  color: var(--text-primary);
+}
+
+.student-action-menu {
+  width: 180px;
+
+  position: absolute;
+
+  top: 50px;
+  right: 20px;
+
+  z-index: 20;
+
+  padding: 6px;
+
+  background: white;
+
+  border: 1px solid var(--border);
+
+  border-radius: 10px;
+
+  box-shadow: var(--shadow-md);
+}
+
+.student-action-menu button {
+  width: 100%;
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 9px;
+
+  padding: 9px 10px;
+
+  border: none;
+
+  border-radius: 7px;
+
+  background: transparent;
+
+  color: var(--text-secondary);
+
+  text-align: left;
+
+  font-size: 12px;
+
+  cursor: pointer;
+}
+
+.student-action-menu button:hover {
+  background: var(--bg-soft);
+
+  color: var(--text-primary);
+}
+
+.student-action-menu svg {
+  font-size: 16px;
+}
+
+.student-action-menu .delete-action {
+  color: #ef4444;
+}
+
+.student-action-menu .delete-action:hover {
+  background: #fef2f2;
+}
+
+/* =========================
+   EMPTY STATE
+========================= */
+
+.empty-students {
+  height: 250px;
+
+  text-align: center;
+}
+
+.empty-students > div {
+  display: flex;
+
+  align-items: center;
+
+  flex-direction: column;
+
+  gap: 7px;
+}
+
+.empty-students svg {
+  font-size: 30px;
+
+  color: var(--text-muted);
+}
+
+.empty-students h4 {
+  margin: 0;
+
+  font-size: 15px;
+}
+
+.empty-students p {
+  margin: 0;
+
+  color: var(--text-muted);
+
+  font-size: 12px;
+}
+
+/* =========================
+   PAGINATION
+========================= */
+
+.students-pagination {
+  display: flex;
+
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 17px 24px;
+}
+
+.students-pagination > span {
+  color: var(--text-muted);
+
+  font-size: 11px;
+}
+
+.students-pagination strong {
+  color: var(--text-primary);
+}
+
+.pagination-controls {
+  display: flex;
+
+  align-items: center;
+
+  gap: 5px;
+}
+
+.pagination-controls button {
+  min-width: 30px;
+  height: 30px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  border: 1px solid var(--border);
+
+  border-radius: 7px;
+
+  background: white;
+
+  color: var(--text-secondary);
+
+  font-size: 11px;
+
+  cursor: pointer;
+}
+
+.pagination-controls button:hover:not(:disabled) {
+  border-color: var(--primary);
+
+  color: var(--primary);
+}
+
+.pagination-controls button:disabled {
+  opacity: 0.4;
+
+  cursor: not-allowed;
+}
+
+.pagination-controls .pagination-active {
+  border-color: var(--primary);
+
+  background: var(--primary);
+
+  color: white;
+}
+
+.pagination-controls > span {
+  padding: 0 3px;
+
+  color: var(--text-muted);
+
+  font-size: 12px;
+}

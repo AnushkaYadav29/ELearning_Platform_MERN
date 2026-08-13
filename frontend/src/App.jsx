@@ -14,6 +14,7 @@ import Login from "./pages/auth/Login";
 import Register from "./pages/auth/Register";
 import ForgotPassword from "./pages/auth/ForgotPassword";
 import ResetPassword from "./pages/auth/ResetPassword";
+import Profile from "./pages/profile/Profile";
 
 // Layouts
 import AdminLayout from "./layouts/AdminLayout";
@@ -26,6 +27,9 @@ import StudentDashboard from "./pages/student/StudentDashboard";
 // Route Protection
 import ProtectedRoute from "./routes/ProtectedRoute";
 import RoleRoute from "./routes/RoleRoute";
+
+import AdminStudents from "./pages/admin/AdminStudents";
+import AdminStudentProfile from "./pages/admin/AdminStudentProfile";
 
 const App = () => {
   return (
@@ -64,6 +68,12 @@ const App = () => {
 
           <Route element={<ProtectedRoute />}>
 
+          {/* COMMON PROFILE ROUTE */}
+  <Route
+    path="/profile"
+    element={<Profile />}
+  />
+
             {/* =====================
                 ADMIN
             ====================== */}
@@ -82,6 +92,15 @@ const App = () => {
                 <Route
                   path="dashboard"
                   element={<AdminDashboard />}
+                />
+
+                <Route
+      path="students"
+      element={<AdminStudents />}
+    />
+                <Route
+                  path="students/:id"
+                  element={<AdminStudentProfile />}
                 />
               </Route>
             </Route>
