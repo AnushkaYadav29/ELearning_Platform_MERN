@@ -12,7 +12,7 @@ import {
   registerUser,
 } from "../api/authApi";
 
-const AuthContext = createContext(null);
+export const AuthContext = createContext(null);
 
 export const AuthProvider = ({ children }) => {
   const [user, setUser] = useState(null);

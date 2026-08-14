@@ -6,6 +6,14 @@ const authRoutes = require("./routes/authRoutes");
 const roleRoutes = require("./routes/roleRoutes");
 const adminStudentRoutes = require("./routes/adminStudentRoutes");
 const userRoutes = require("./routes/userRoutes");
+const categoryRoutes = require("./routes/categoryRoutes");
+const courseRoutes = require(
+  "./routes/courseRoutes"
+);
+
+const enrollmentRoutes = require(
+  "./routes/enrollmentRoutes"
+);
 
 const notFound = require("./middleware/notFoundMiddleware");
 const { errorHandler } = require("./middleware/errorMiddleware");
@@ -39,6 +47,12 @@ app.use(
 );
 
 app.use("/api/users", userRoutes);
+
+app.use("/api/categories", categoryRoutes);
+
+app.use("/api/courses", courseRoutes);
+
+app.use("/api/enrollments", enrollmentRoutes);
 
 app.use(notFound);
 
